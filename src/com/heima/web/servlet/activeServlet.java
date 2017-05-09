@@ -33,10 +33,7 @@ public class activeServlet extends HttpServlet {
 		String activeCode=request.getParameter("activecode");
 		
 		UserService service=new UserService();
-<<<<<<< HEAD
 		
-=======
->>>>>>> origin/master
 		service.active(activeCode);
 		
 		//跳转到成功页面

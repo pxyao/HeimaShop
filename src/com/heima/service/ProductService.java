@@ -92,7 +92,6 @@ public class ProductService {
 		pageBean.setList(list);
 		return pageBean;
 	}
-<<<<<<< HEAD
 
 	public Product findProductByPid(String pid) {
 		ProductDao productDao = new ProductDao();
@@ -104,6 +103,4 @@ public class ProductService {
 		}
 		return product;
 	}
-=======
->>>>>>> origin/master
 }

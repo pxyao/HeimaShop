@@ -33,13 +33,9 @@ public class checkUsernameServlet extends HttpServlet {
 		String username=request.getParameter("username");
 		
 		UserService service=new UserService();
-<<<<<<< HEAD
 		
 		boolean isExist=service.checkUsername(username);
 		
-=======
-		boolean isExist=service.checkUsername(username);
->>>>>>> origin/master
 		String json = "{\"isExist\":"+isExist+"}";
 		
 		response.getWriter().write(json);
