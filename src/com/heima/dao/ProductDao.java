@@ -4,16 +4,29 @@ import java.sql.SQLException;
 import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
+<<<<<<< HEAD
+import org.apache.commons.dbutils.handlers.BeanHandler;
+=======
+>>>>>>> origin/master
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import com.heima.domain.Category;
 import com.heima.domain.Product;
+<<<<<<< HEAD
+import com.heima.domain.User;
+=======
+>>>>>>> origin/master
 import com.heima.utils.DataSourceUtils;
 import com.sun.org.apache.bcel.internal.generic.NEW;
 
 public class ProductDao {
 	
+<<<<<<< HEAD
+	private List<Product> query;
+
+=======
+>>>>>>> origin/master
 	/*
 	 * 获取热门商品
 	 */
@@ -54,4 +67,14 @@ public class ProductDao {
 		List<Product> query = runner.query(sql, new BeanListHandler<Product>(Product.class),cid,index,currentCount);
 		return query;
 	}
+<<<<<<< HEAD
+
+	public Product findProductByPid(String pid) throws SQLException {
+		QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
+		String sql = "select * from product where pid=?";
+		return runner.query(sql, new BeanHandler<Product>(Product.class),pid);
+
+	}
+=======
+>>>>>>> origin/master
 }

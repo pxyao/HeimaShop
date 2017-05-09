@@ -54,11 +54,11 @@
 			$(function() {
 				var content = "";
 				$.post(
-					"${pageContext.request.contextPath}/CategoryList",
+					"${pageContext.request.contextPath}/product?method=categoryList",
 					function(data) {
 						//动态创建li
 						for(var i = 0;i < data.length; i++) {
-							content+="<li><a href='${pageContext.request.contextPath}/productListByCid?cid="+data[i].cid+"'>"+data[i].cname+"</a></li>";
+							content+="<li><a href='${pageContext.request.contextPath}/product?method=productList&cid="+data[i].cid+"'>"+data[i].cname+"</a></li>";
 						}
 						//写入html
 						$("#categoryUl").html(content);

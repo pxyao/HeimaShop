@@ -92,4 +92,18 @@ public class ProductService {
 		pageBean.setList(list);
 		return pageBean;
 	}
+<<<<<<< HEAD
+
+	public Product findProductByPid(String pid) {
+		ProductDao productDao = new ProductDao();
+		Product product = null;
+		try {
+			product = productDao.findProductByPid(pid);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return product;
+	}
+=======
+>>>>>>> origin/master
 }

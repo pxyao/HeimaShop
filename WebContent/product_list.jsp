@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<%@page import="javafx.scene.control.Alert"%>
+=======
+>>>>>>> origin/master
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -32,13 +36,26 @@ body {
 	<!-- 引入header.jsp -->
 	<jsp:include page="/header.jsp"></jsp:include>
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/master
 	<div class="row" style="width: 1210px; margin: 0 auto;">
 		<div class="col-md-12">
 			<ol class="breadcrumb">
 				<li><a href="#">首页</a></li>
 			</ol>
 		</div>
+<<<<<<< HEAD
+		<c:forEach items="${pageBean.list }" var="pro">  <!-- 双引号前面多了个空格会报错？？ -->
+			<div class="col-md-2" style="height:250px">
+
+				<a href="${pageContext.request.contextPath}/product?method=productInfo&pid=${pro.pid }&cid=${cid }&currentpage=${pageBean.currentPage }">
+					<img src="${pageContext.request.contextPath }/${pro.pimage}" width="170" height="170" style="display: inline-block;">
+				</a>
+				<p>
+					<a href="${pageContext.request.contextPath}/product?method=productInfo&pid=${pro.pid }&cid=${cid }&currentpage=${pageBean.currentPage }">${pro.pname }</a>
+=======
 		
 		<c:forEach items="${pageBean.list }" var="pro">  <!-- 双引号前面多了个空格会报错？？ -->
 			<div class="col-md-2" style="height:250px">
@@ -47,6 +64,7 @@ body {
 				</a>
 				<p>
 					<a href="product_info.html" style='color: green'>${pro.pname }</a>
+>>>>>>> origin/master
 				</p>
 				<p>
 					<font color="#FF0000">商城价：&yen;${pro.shop_price }</font>
@@ -101,11 +119,20 @@ body {
 		<div style="overflow: hidden;">
 
 			<ul style="list-style: none;">
+<<<<<<< HEAD
+				<c:forEach items="${historyProductList }" var="historyPro">
+					<li style="width: 150px; height: 216; float: left; margin: 0 8px 0 0; padding: 0 18px 15px; text-align: center;">
+						<img src="${pageContext.request.contextPath }/${historyPro.pimage }" width="130px" height="130px" />
+					</li>
+				</c:forEach>
+			</ul>
+=======
 				<li
 					style="width: 150px; height: 216; float: left; margin: 0 8px 0 0; padding: 0 18px 15px; text-align: center;"><img
 					src="products/1/cs10001.jpg" width="130px" height="130px" /></li>
 			</ul>
 
+>>>>>>> origin/master
 		</div>
 	</div>
 
