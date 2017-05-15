@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a>${pageBean.currentPage }</a>
-	<h1>aaa</h1>
+	<a href="/">
+		<input type="button" value="sub"/>
+	</a>
 </body>
 </html>

@@ -19,6 +19,17 @@ public class UserService {
 		return row>0?true:false;
 	}
 	
+	public User login(String username,String password){
+		UserDao userDao = new UserDao();
+		User user = new User();
+		try {
+			user = userDao.login(username, password);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return user;
+	}
+	
 	//¼¤»î
 	public void active(String activeCode){
 		UserDao userDao=new UserDao();

@@ -1,6 +1,6 @@
 package com.heima.domain;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Product {
 	/*`pid` varchar(32) NOT NULL,
@@ -20,7 +20,7 @@ public class Product {
 	private String pimage;
 	private Date pdate;
 	private int is_hot;
-	private String pdesc;
+	private String pdesc;//…Ã∆∑ΩÈ…‹
 	private int pflag;
 	private Category category;
 	public String getPid() {

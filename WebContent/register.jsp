@@ -28,7 +28,7 @@
 			//目的 对输入的username进行ajax校验
 			$.ajax({
 				"async":false, //异步
-				"url":"${pageContext.request.contextPath}/checkUsername",
+				"url":"${pageContext.request.contextPath}/User?method=checkUsername",
 				"data":{"username":value}, //传递数据
 				"type":"POST",
 				"dataType":"json",
@@ -67,7 +67,7 @@
 			},
 			messages:{
 				"username":{
-					"required":"用户名不能为空",
+					"required":"请输入用户名",
 					"checkUsername":"用户名已存在"
 				},
 				"password":{
@@ -127,7 +127,10 @@ font {
 			<div class="col-md-8"
 				style="background: #fff; padding: 40px 80px; margin: 30px; border: 7px solid #ccc;">
 				<font>会员注册</font>USER REGISTER
-				<form id="myform" class="form-horizontal" action="${pageContext.request.contextPath}/register" method="post" style="margin-top: 5px;">
+				<form id="myform" class="form-horizontal" action="${pageContext.request.contextPath}/User?method=register" method="post" style="margin-top: 5px;">
+					
+					<input type="hidden" name="method" value="login">
+					
 					<div class="form-group">
 						<label for="username" class="col-sm-2 control-label">用户名</label>
 						<div class="col-sm-6">
@@ -138,7 +141,7 @@ font {
 					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-2 control-label">密码</label>
 						<div class="col-sm-6">
-							<input type="password" class="form-control" id="inputPassword3" name="password"
+							<input type="password" class="form-control" id="password" name="password"
 								placeholder="请输入密码">
 						</div>
 					</div>
@@ -146,7 +149,7 @@ font {
 						<label for="confirmpwd" class="col-sm-2 control-label">确认密码</label>
 						<div class="col-sm-6">
 							<input type="password" class="form-control" id="confirmpwd"
-								placeholder="请输入确认密码">
+								placeholder="请输入确认密码" name="repassword">
 						</div>
 					</div>
 					<div class="form-group">
